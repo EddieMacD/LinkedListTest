@@ -16,6 +16,7 @@ namespace LinkedList
             list.AddItem(645);
             list.AddItem(335);
 
+            Console.WriteLine(list.IsEmpty());
             list.PrintList();
 
             list.DeleteItem(3);
@@ -24,6 +25,8 @@ namespace LinkedList
             list.AddItem(456);
             list.AddItem(789);
 
+            Console.WriteLine();
+            Console.WriteLine(list.IsEmpty());
             list.PrintList();
 
             list.DeleteItem(789);
@@ -31,13 +34,18 @@ namespace LinkedList
             list.DeleteItem(456);
             list.DeleteItem(5);
             list.DeleteItem(335);
+            list.DeleteItem(420);
 
+            Console.WriteLine();
+            Console.WriteLine(list.IsEmpty());
             list.PrintList();
 
             list.AddItem(4856);
             list.AddItem(5433);
             list.AddItem(7);
 
+            Console.WriteLine();
+            Console.WriteLine(list.IsEmpty());
             list.PrintList();
 
             Console.ReadLine();

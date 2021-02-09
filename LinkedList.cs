@@ -67,18 +67,14 @@ namespace LinkedList
             }
             else
             {
-                try
+                while (temp.Pointer.Data != dataToDelete && temp.Pointer.Data != int.MinValue)
                 {
-                    while (temp.Pointer.Data != dataToDelete)
-                    {
-                        temp = temp.Pointer;
-                    }
-
-                    temp.RemoveNext();
+                    temp = temp.Pointer;
                 }
-                catch
+
+                if (temp.Pointer.Data == dataToDelete)
                 {
-                    //Item doesn't exist catch
+                    temp.RemoveNext();
                 }
             }
         }
@@ -86,6 +82,18 @@ namespace LinkedList
         public void PrintList()
         {
             Head.PrintList();
+        }
+
+        public bool IsEmpty()
+        {
+            bool output = false;
+
+            if(Head.Data == int.MinValue)
+            {
+                output = true;
+            }
+
+            return output;
         }
     }
 }
